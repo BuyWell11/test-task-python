@@ -55,7 +55,7 @@ def text_stat(filename):
     for letter, freq in letter_proportion.items():
         all_letter_stat[letter] = (letter_frequency[letter], freq)
 
-    # Количества слов, в которых одновременно встречаются буквы обоих алфавитов
+    # Количество слов, в которых одновременно встречаются буквы обоих алфавитов
     bilingual_word_amount = sum(
         [1 for paragraph in words for word in paragraph if re.search(r'([а-яА-Я]+\w*[a-zA-Z]+\w*|[a-zA-Z]+\w*[а-яА-Я]+\w*)', word)])
 
